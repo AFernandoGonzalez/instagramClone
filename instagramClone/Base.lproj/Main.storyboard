@@ -45,7 +45,7 @@
                                 <rect key="frame" x="65" y="361" width="285" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qt0-U7-Nc2">
                                 <rect key="frame" x="65" y="468" width="47" height="30"/>
@@ -87,11 +87,65 @@
                         <viewLayoutGuide key="safeArea" id="GEM-Fk-e23"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5pe-Jn-hwt"/>
+                    <navigationItem key="navigationItem" id="5pe-Jn-hwt">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="camera" catalog="system" id="DFK-bo-t9a">
+                            <connections>
+                                <segue destination="kPx-hW-oEH" kind="presentation" id="1GL-gq-qnZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvd-nW-gzO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1707.2463768115942" y="93.75"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="vCT-ER-Usf">
+            <objects>
+                <viewController id="kPx-hW-oEH" customClass="CameraViewController" customModule="instagramClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7uQ-3i-Lwj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="image_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="cBu-wC-H0h">
+                                <rect key="frame" x="20" y="65" width="374" height="246"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2IJ-XN-IbG" appends="YES" id="b3p-t4-frK"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SUg-FG-DWI">
+                                <rect key="frame" x="84" y="339" width="247" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85C-25-3oX">
+                                <rect key="frame" x="169" y="381" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmitButton:" destination="kPx-hW-oEH" eventType="touchUpInside" id="JdO-qG-i9n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2PP-SO-kTA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="commentField" destination="SUg-FG-DWI" id="utE-hH-cCf"/>
+                        <outlet property="imageView" destination="cBu-wC-H0h" id="ccE-gb-6MT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yy3-l0-8hM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2IJ-XN-IbG">
+                    <connections>
+                        <action selector="onCameraButton:" destination="kPx-hW-oEH" id="XWy-Ci-KmU"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2478.2608695652175" y="82.366071428571431"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4eW-Xv-FU5">
@@ -113,6 +167,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
+        <image name="image_placeholder" width="375" height="375"/>
         <image name="instagram_logo" width="255" height="108"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
