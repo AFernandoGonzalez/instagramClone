@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1048CF1026F692B00092470C /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1048CF0F26F692B00092470C /* CommentCell.swift */; };
 		106AC08226F5845E00644178 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106AC08126F5845E00644178 /* CameraViewController.swift */; };
 		106AC08426F60FE500644178 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106AC08326F60FE500644178 /* PostCell.swift */; };
 		1093FE0326F56DC00054FC78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1093FE0226F56DC00054FC78 /* AppDelegate.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1048CF0F26F692B00092470C /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		106AC08126F5845E00644178 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		106AC08326F60FE500644178 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		1093FDFF26F56DC00054FC78 /* instagramClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagramClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +134,7 @@
 				1093FE3426F5787E0054FC78 /* FeedViewController.swift */,
 				106AC08126F5845E00644178 /* CameraViewController.swift */,
 				106AC08326F60FE500644178 /* PostCell.swift */,
+				1048CF0F26F692B00092470C /* CommentCell.swift */,
 			);
 			path = instagramClone;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				1093FE3526F5787E0054FC78 /* FeedViewController.swift in Sources */,
 				1093FE0526F56DC00054FC78 /* SceneDelegate.swift in Sources */,
 				106AC08426F60FE500644178 /* PostCell.swift in Sources */,
+				1048CF1026F692B00092470C /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

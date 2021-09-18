@@ -8,6 +8,7 @@ target 'instagramClone' do
   # Pods for instagramClone
 	pod 'Parse'
  	pod 'AlamofireImage'
+	pod 'MessageInputBar'
 
 
   target 'instagramCloneTests' do
