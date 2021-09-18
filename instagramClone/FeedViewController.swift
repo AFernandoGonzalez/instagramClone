@@ -55,17 +55,18 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let user = post["author"] as! PFUser
         cell.usernameLabel.text = user.username
-        
         cell.captionLabel.text = post["caption"] as? String
-        print("4")
-        
+      
         let imageFile = post["image"] as! PFFileObject
         let urlString = imageFile.url!
         let url = URL(string:  urlString)!
         
         cell.photoView.af.setImage(withURL: url)
+        //cell.photoView.layer.cornerRadius = 8
+        cell.photoView.layer.cornerRadius = 30
         
-        print("5")
+       
+       
         
         return cell
     }

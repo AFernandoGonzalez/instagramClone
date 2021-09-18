@@ -43,6 +43,8 @@ class LoginViewController: UIViewController {
             // other fields can be set just like with PFObject
         //user[@"phone"] = @"415-392-0202";
         
+    
+        
         user.signUpInBackground{(success, error) in
             if success {
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
@@ -62,4 +64,39 @@ class LoginViewController: UIViewController {
     }
     */
 
+}
+
+
+/// this code helps add border radious to Interface Builder Inspector
+
+@IBDesignable extension UIButton {
+
+    @IBInspectable var borderWidth: CGFloat {
+        set {
+            layer.borderWidth = newValue
+        }
+        get {
+            return layer.borderWidth
+        }
+    }
+
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+
+    @IBInspectable var borderColor: UIColor? {
+        set {
+            guard let uiColor = newValue else { return }
+            layer.borderColor = uiColor.cgColor
+        }
+        get {
+            guard let color = layer.borderColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
 }
